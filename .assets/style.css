@@ -4,14 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
-*/
 
-:root {
- /*
+
+:root { 
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Tilt Warp', cursive;
     --fonte3: 'Cabin Sketch', cursive;
-*/}
+}
+*/
 
 
 * {
@@ -23,7 +23,7 @@
 body {
     display: flex;
     flex-wrap: wrap;
-    margin: 3px;
+    margin: 0px;
     flex: 1 1 100vw;
 }
 
@@ -102,6 +102,8 @@ footer {
 }
 */
 
+/*Layout 3*/
+/*
 header {
     flex: 1 1 100vw;
     height: 100px;
@@ -110,9 +112,7 @@ header {
 nav {
     flex: 1 1 100vw;
     height: 100px;
-    /*Alinha na vertical*/
     align-items: center;
-    /*Alinha na horizontal*/
     justify-content: center;
 }
 
@@ -151,4 +151,104 @@ a {
         height: 100px;
     }
 }
+*/
 
+/*Layout 4*/
+header {
+    flex: 1 1 100vw;
+    height: 100px;
+}
+
+header #logo {
+    flex: 0 1 200px;
+    background: #c9c9c9;
+}
+
+#openMenu, #closeMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1 1 100vw;
+    /*Alinha na vertical*/
+    align-items: center;
+    /*Alinha na horizontal*/
+    justify-content: flex-end;
+}
+
+nav a {
+    margin: 3%;
+    font-size: 20pt;
+}
+
+main {
+    flex: 20 1 500px;
+    height: calc(100vh - 224px);
+}
+
+aside {
+    flex: 1 1 200px;
+}
+
+footer {
+    flex: 1 1 100vw;
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.colorButton {
+    color: white
+}
+
+@media only screen and (max-width:923px) {
+    main {
+        height: calc(100vh - 330px);
+    }
+
+    aside {
+        flex: 1 1 100vw;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 717px) {
+    #openMenu, #closeMenu {
+        display: block;
+    }
+
+    #openMenu{
+        position: fixed;
+        right: 35px;
+        top: 35px;
+    }
+
+    #closeMenu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    nav {
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.8);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+}
